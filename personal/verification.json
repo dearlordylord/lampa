@@ -1,6 +1,6 @@
 {
-  "checked_utc": "2026-10-23T06:25:38.200964+00:00",
-  "build": "2026.10.23.1",
+  "checked_utc": "2026-10-23T16:42:49.627028+00:00",
+  "build": "2026.10.23.2",
   "checks": {
     "app.min.js": "sha256 matches",
     "plugins/kinopub.js": "sha256 matches",
@@ -16,6 +16,7 @@
     "KinoPub_device_code": "200, five-character user_code; not activated or stored",
     "TMDB_direct": "200 with movie metadata and CORS permission"
   },
+  "manual_local_Chrome_build": "2026.10.23.1 (startup verification before audio fix)",
   "manual_local_Chrome": [
     "catalog and posters rendered",
     "KinoPub settings rendered",
@@ -25,6 +26,7 @@
     "real-user account activation",
     "Samsung hardware playback",
     "Samsung app-store availability",
-    "MSX application UI on TV"
+    "MSX application UI on TV",
+    "Bleach API response/audio playback with a real account"
   ]
 }
