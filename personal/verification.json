@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-10-23T06:25:38.200964+00:00",
+  "build": "2026.10.23.1",
+  "checks": {
+    "app.min.js": "sha256 matches",
+    "plugins/kinopub.js": "sha256 matches",
+    "personal/bootstrap.js": "sha256 matches",
+    "personal/loader.js": "sha256 matches",
+    "vender/jquery/jquery.js": "sha256 matches",
+    "index.html": "CSP and personal loader published",
+    "msx launcher": "raw-GitHub descriptor and content action verified",
+    "guide.html": "published with launcher instructions"
+  },
+  "live_anonymous_checks": {
+    "KinoPub_CORS": "200 with allow-origin and Authorization preflight support",
+    "KinoPub_device_code": "200, five-character user_code; not activated or stored",
+    "TMDB_direct": "200 with movie metadata and CORS permission"
+  },
+  "manual_local_Chrome": [
+    "catalog and posters rendered",
+    "KinoPub settings rendered",
+    "actual OAuth code modal rendered; closed without activation"
+  ],
+  "not_verified": [
+    "real-user account activation",
+    "Samsung hardware playback",
+    "Samsung app-store availability",
+    "MSX application UI on TV"
+  ]
+}
