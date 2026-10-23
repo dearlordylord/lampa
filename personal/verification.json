@@ -1,6 +1,6 @@
 {
-  "checked_utc": "2026-10-23T16:56:56.130073+00:00",
-  "build": "2026.10.23.3",
+  "checked_utc": "2026-10-23T19:44:28.072039+00:00",
+  "build": "2026.10.23.4",
   "checks": {
     "app.min.js": "sha256 matches",
     "plugins/kinopub.js": "sha256 matches",
