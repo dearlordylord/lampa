@@ -1,16 +1,17 @@
 {
-  "build": "2026.10.23.4",
+  "build": "2026.10.23.5",
   "upstream_lampa": "yumata/lampa@02df3448ec9139b77ff1f5603785591fe6b4419b",
-  "plugin": "dearlordylord/lampa_kinopub@265621acfe8f6babc3879f82e33f2cc351b52d3b",
+  "plugin": "dearlordylord/lampa_kinopub@fd446480b765cfe0c07ac2259f66610dbbab1df6",
   "jquery": {
     "version": "3.7.1",
     "source": "https://code.jquery.com/jquery-3.7.1.js"
   },
   "sha256": {
-    "app.min.js": "a2cdc6aa61cfd7de3c0eb0fe54a60ee803b3a4596d42d398c3da5601486d0572",
-    "plugins/kinopub.js": "e8d0a0a575117cc554975b619540e5faee6b103eb6d4600d5e846499e0f4fa2c",
-    "personal/bootstrap.js": "2da19a50d0f40312b125929178fd8dde8a3e5846e5c0b56eea0f68b156c8075a",
-    "personal/loader.js": "ad3d4e844298719630400fe83276aff089c3bbe3b53e21c2d74aecc01802e7d8",
-    "vender/jquery/jquery.js": "78a85aca2f0b110c29e0d2b137e09f0a1fb7a8e554b499f740d6744dc8962cfe"
+    "app.min.js": "36112611b9ad72cc14ec10c5a173935e4fdab60388b461a306d73a251e624619",
+    "plugins/kinopub.js": "be8f3f5e53bc85e538553f350bffee958705ba13557751f8d743a0d0455da7cf",
+    "personal/bootstrap.js": "8e3f47bf49b8b9f35493c43be6193f1b71fda569f0d7e2320bf4ba65fb567805",
+    "personal/loader.js": "a662f2ec988be34a26a392f7e281a87eba26624d05e0dbb7fec48ed4acf8c0f5",
+    "vender/jquery/jquery.js": "78a85aca2f0b110c29e0d2b137e09f0a1fb7a8e554b499f740d6744dc8962cfe",
+    "personal/diagnostics.js": "2c65dffc9f4c99837101e128a3869a621d4871c58c6fefad5262687c9e589938"
   }
 }

@@ -89,3 +89,11 @@ in favor of its proxy, are restored to the pre-play menu and routed to the selec
 track index. The plugin fork's isolated jsdom regression first failed on the
 old code and now passes. Voice choices precede season entries for discoverability.
 This does not claim that a live Bleach API response or TV playback was verified.
+
+## Build 5: explicitly enabled audio telemetry
+
+A fixed first-party diagnostic module can be enabled from KinoPub settings for 15 minutes, with no persistence across page reloads. The user authorized a debugging connection. Direct probes of the supplied TV address 192.168.18.52 (8001, 8002, 26101) failed with No route to host; no Developer Mode, Samsung inspector attachment, or device installation occurred.
+
+The diagnostic sink is a temporary Cloudflare Quick Tunnel forwarding to a loopback-only, write-only Python collector on this Mac. The exact /report URL is the only additional CSP/XHR destination, only POST is allowed and the guard requires an active diagnostic session. Default remains no telemetry. The client sends an explicit metadata whitelist; the receiver independently reconstructs the whitelist, limits body/track/event counts, restricts browser origins, expires after two hours, and provides no report-read or command endpoint. Account fields, arbitrary logs/error messages, titles, stream URLs, manifests and cookies are excluded. A manifest may be read from its already allowed CDN in the client, but only CODECS tokens and HTTP status are uploaded. Responses are empty and never evaluated. WebSocket, eval and remote-control capabilities remain disabled.
+
+The destination is public in source, so Origin is not authentication; forged technical reports/spam are possible and reports are untrusted. The receiver cannot cause the TV to execute commands, and disclosure is minimized through the bounded schema. This temporary channel is not a general security or codec-support guarantee. Real TV telemetry and sound remain unverified until the user enables it and reproduces playback.
