@@ -1,0 +1,17 @@
+{
+  "type": "pages",
+  "headline": "Lampa · личная сборка",
+  "pages": [
+    {
+      "items": [
+        {
+          "type": "button",
+          "layout": "2,2,8,2",
+          "icon": "movie",
+          "label": "Открыть Lampa + KinoPub",
+          "action": "link:https://dearlordylord.github.io/lampa/"
+        }
+      ]
+    }
+  ]
+}
