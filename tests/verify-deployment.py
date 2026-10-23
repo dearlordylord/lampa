@@ -18,9 +18,9 @@ index = get(BASE).decode()
 assert 'Content-Security-Policy' in index and './personal/bootstrap.js' in index
 checks['index.html'] = 'CSP and personal loader published'
 start = json.loads(get('https://raw.githubusercontent.com/dearlordylord/msx/refs/heads/main/start.json'))
-assert start['parameter'] == 'content:' + BASE + 'msx/menu.json'
+assert start['parameter'] == 'content:' + BASE + 'msx/menu.json?v=2'
 menu = json.loads(get(BASE + 'msx/menu.json'))
-assert menu['pages'][0]['items'][0]['action'] == 'link:' + BASE
+assert menu['pages'][0]['items'][0]['action'] == 'link:' + BASE + '?v=2'
 assert 'id:rgh:dearlordylord' in get(BASE + 'guide.html').decode()
 checks['msx launcher'] = 'raw-GitHub descriptor and content action verified'
 checks['guide.html'] = 'published with launcher instructions'
@@ -32,10 +32,11 @@ record = {
         'KinoPub_device_code': '200, five-character user_code; not activated or stored',
         'TMDB_direct': '200 with movie metadata and CORS permission'
     },
+    'manual_local_Chrome_build': '2026.10.23.1 (startup verification before audio fix)',
     'manual_local_Chrome': ['catalog and posters rendered', 'KinoPub settings rendered',
         'actual OAuth code modal rendered; closed without activation'],
     'not_verified': ['real-user account activation', 'Samsung hardware playback',
-        'Samsung app-store availability', 'MSX application UI on TV']
+        'Samsung app-store availability', 'MSX application UI on TV', 'Bleach API response/audio playback with a real account']
 }
 (ROOT / 'personal/verification.json').write_text(json.dumps(record, ensure_ascii=False, indent=2) + '\n')
 print('Published assets, CSP, guide and MSX descriptor verified.')

@@ -9,7 +9,7 @@
           "layout": "2,2,8,2",
           "icon": "movie",
           "label": "Открыть Lampa + KinoPub",
-          "action": "link:https://dearlordylord.github.io/lampa/"
+          "action": "link:https://dearlordylord.github.io/lampa/?v=2"
         }
       ]
     }

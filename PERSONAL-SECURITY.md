@@ -1,6 +1,6 @@
 # Personal build: security changes and verification
 
-Build 2026.10.23.1, for a Samsung The Frame QN55LS03BAFXZC (2022).
+Build 2026.10.23.2, for a Samsung The Frame QN55LS03BAFXZC (2022).
 
 ## Changes
 
@@ -34,7 +34,7 @@ Build 2026.10.23.1, for a Samsung The Frame QN55LS03BAFXZC (2022).
 - `node tests/security.cjs`: network rejections, credential destinations, preserved token,
   disabled socket facade, removal of eval handlers, fixed local-only extension loader,
   CSP, vendored dependency and recorded asset hashes. Transport is mocked, no account used.
-- `node smoke-test.js` in the plugin fork: 25 startup/privacy checks, including malicious
+- `node smoke-test.js` in the plugin fork: 32 startup/privacy/audio checks, including malicious
   voice label, saved log/proxy addresses and card opening. Upstream fails these checks.
 - JS syntax checks and deliberate allowlist mutation: removing the allowlist guard must
   fail the test; restoration must pass.
@@ -70,3 +70,12 @@ Known upstream policy/primary references:
 - https://github.com/dearlordylord/lampa_kinopub/blob/main/security/SECURITY-AUDIT.md
 - https://github.com/jquery/jquery/security/advisories/GHSA-gxr4-xjj5-5px2
 - https://msx.benzac.de/wiki/index.php?title=Setup_Start_Parameter
+
+## Audio follow-up, build 2
+
+Removed the upstream Russian-only card filter and exact `Orig` marker restriction
+from track selection. Every API language remains visible, with JPN/ENG/RUS labels.
+Additional audio picks prefer multi-audio HLS over HLS2 when that URL exists.
+The source view explicitly identifies KinoPub. Regression fixtures first failed
+on the old code, then passed after this change. A particular Bleach item response
+was not fetched with a real account, and actual TV track switching remains unverified.
