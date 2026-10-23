@@ -1,6 +1,6 @@
 # Personal build: security changes and verification
 
-Build 2026.10.23.2, for a Samsung The Frame QN55LS03BAFXZC (2022).
+Build 2026.10.23.3, for a Samsung The Frame QN55LS03BAFXZC (2022).
 
 ## Changes
 
@@ -79,3 +79,13 @@ Additional audio picks prefer multi-audio HLS over HLS2 when that URL exists.
 The source view explicitly identifies KinoPub. Regression fixtures first failed
 on the old code, then passed after this change. A particular Bleach item response
 was not fetched with a real account, and actual TV track switching remains unverified.
+
+## UI follow-up, build 3
+
+The initial boot-only mocks did not catch the current Lampa full-card event
+shape. The plugin now uses full.body/full.link and puts a duplicate-safe KinoPub
+button in the visible primary row. Audio choices, previously removed by upstream
+in favor of its proxy, are restored to the pre-play menu and routed to the selected
+track index. The plugin fork's isolated jsdom regression first failed on the
+old code and now passes. Voice choices precede season entries for discoverability.
+This does not claim that a live Bleach API response or TV playback was verified.
