@@ -1,12 +1,13 @@
 {
-  "checked_utc": "2026-10-23T19:44:28.072039+00:00",
-  "build": "2026.10.23.4",
+  "checked_utc": "2026-10-23T20:07:18.389961+00:00",
+  "build": "2026.10.23.5",
   "checks": {
     "app.min.js": "sha256 matches",
     "plugins/kinopub.js": "sha256 matches",
     "personal/bootstrap.js": "sha256 matches",
     "personal/loader.js": "sha256 matches",
     "vender/jquery/jquery.js": "sha256 matches",
+    "personal/diagnostics.js": "sha256 matches",
     "index.html": "CSP and personal loader published",
     "msx launcher": "raw-GitHub descriptor and content action verified",
     "guide.html": "published with launcher instructions"
@@ -28,5 +29,11 @@
     "Samsung app-store availability",
     "MSX application UI on TV",
     "Bleach API response/audio playback with a real account"
-  ]
+  ],
+  "audio_diagnostics": {
+    "local_checks": "client opt-in/expiry/redaction and collector schema/CORS/write-only checks passed",
+    "live_HTTPS_probe": "OPTIONS and POST returned 204 through temporary Cloudflare Tunnel",
+    "real_TV_reports_received": 0,
+    "native_Samsung_attachment": "not connected: supplied TV address returned No route to host"
+  }
 }
