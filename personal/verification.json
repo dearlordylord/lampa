@@ -1,6 +1,6 @@
 {
-  "checked_utc": "2026-10-24T03:22:42.155871+00:00",
-  "build": "2026.10.24.6",
+  "checked_utc": "2026-10-24T03:36:01.821548+00:00",
+  "build": "2026.10.24.7",
   "checks": {
     "app.min.js": "sha256 matches",
     "plugins/kinopub.js": "sha256 matches",
@@ -30,11 +30,10 @@
     "MSX application UI on TV",
     "Bleach API response/audio playback with a real account"
   ],
-  "audio_diagnostics": {
-    "real_TV_reports_received": 459,
-    "observed": "Russian and Japanese requests are AAC stereo; HLS4 test reported fatal playback failure before single unlabelled audio became available",
-    "fallback_regression": "HLS4 failure with Japanese selected reproduced default-Russian HLS2 fallback; fixed and tested in build 6",
-    "live_HTTPS_receiver": "204 with expanded schema",
-    "not_verified": "Root HLS4 failure code and audible Japanese on Samsung; awaiting updated-build report"
+  "audio_protocol": {
+    "source": "CDNServices public player chunk, inspected as text",
+    "change": "Independent legacy HLS audio-in-path selector, applied to primary, quality and fallback URLs",
+    "local_checks": "49 plugin checks and audio/network security checks passed",
+    "not_verified": "Audible Japanese with build 7 on Samsung; standalone replacement not built"
   }
 }
