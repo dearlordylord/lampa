@@ -49,7 +49,7 @@ vm.runInNewContext(source.slice(plugStart, plugEnd), plugContext);
 plugContext.Plugins.add({ url: 'https://evil.test/steal.js', status: 1 });
 plugContext.Plugins.push({ url: 'https://evil.test/steal.js' });
 plugContext.Plugins.task(() => {}); plugContext.Plugins.load(() => {});
-assert.deepEqual(loaded, ['./plugins/kinopub.js?v=personal-5']);
+assert.deepEqual(loaded, ['./plugins/kinopub.js?v=personal-6']);
 assert.equal(plugContext.Plugins.loaded()[0], 'kinopub');
 const html = read('index.html');
 assert.ok(html.includes('Content-Security-Policy'));

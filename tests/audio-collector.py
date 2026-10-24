@@ -30,8 +30,13 @@ def sanitize(value):
     codecs = value.get('manifestCodecs', [])
     result['manifestCodecs'] = [tag(c) for c in codecs[:20]] if isinstance(codecs, list) else []
     result['manifestStatus'] = numeric(value.get('manifestStatus'))
+    result['streamFormat'] = value.get('streamFormat') if value.get('streamFormat') in ('hls', 'hls2', 'hls4') else ''
+    result['variantCount'] = numeric(value.get('variantCount'))
+    renditions = value.get('renditions', [])
+    result['renditions'] = [audio(r) for r in renditions[:40] if isinstance(r, dict)] if isinstance(renditions, list) else []
     error = value.get('error', {})
-    result['error'] = {'code': numeric(error.get('code')), 'fatal': error.get('fatal') is True} if isinstance(error, dict) else None
+    result['error'] = {'code': numeric(error.get('code')), 'fatal': error.get('fatal') is True,
+                       'detail': tag(error.get('detail'))} if isinstance(error, dict) else None
     for key in ('tracks', 'nativeTracks'):
         entries = value.get(key, [])
         result[key] = [audio(t) for t in entries[:40] if isinstance(t, dict)] if isinstance(entries, list) else []
@@ -40,6 +45,7 @@ def sanitize(value):
         video = {}
     result['video'] = {k: numeric(video.get(k)) for k in ('time', 'readyState', 'errorCode', 'volume', 'decodedAudioBytes')}
     result['video']['muted'] = video.get('muted') is True
+    result['video']['hlsBackend'] = video.get('hlsBackend') if video.get('hlsBackend') in ('hlsjs', 'native') else ''
     return result
 
 def handler_for(output, ttl=7200):

@@ -100,3 +100,6 @@ The destination is public in source, so Origin is not authentication; forged tec
 
 
 October 24 diagnostic refresh: the previous two-hour window expired without real TV reports. The same exact write-only endpoint was renewed for 24 hours; opt-in client upload remains limited to 15 minutes per activation. No additional destinations, data fields or remote commands were added.
+
+
+Build 6: live diagnostics received both Russian and Japanese AAC/stereo requests and a fatal error preceding recovered single-track playback. A plugin regression demonstrated the HLS4-to-default-HLS2 fallback and the fix excludes HLS2 for nondefault requested audio. The root HLS4 failure and audible Japanese remain unresolved. Diagnostic metadata now also records the active format enum, native/hls.js backend enum, numeric media error captured before cleanup, known hls.js error enums, and rendition language/number/count. Raw error messages, rendition names, URLs, manifests and credentials remain excluded. Native error code propagation is a metadata-only addition to the core event; backend choice is unchanged.
