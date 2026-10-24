@@ -17,7 +17,7 @@
       selected: value.selected === true };
   }
   function snapshot(event) {
-    var report = { build: '2026.10.24.6', event: event, requested: requested,
+    var report = { build: '2026.10.24.7', event: event, requested: requested,
       tracks: tracks.slice(0, 40).map(audio), nativeTracks: [], video: {},
       manifestCodecs: manifestCodecs, manifestStatus: manifestStatus, error: lastError,
       streamFormat: tag(activePlay && activePlay._kpFormat), renditions: renditions, variantCount: variants };
