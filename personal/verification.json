@@ -1,6 +1,6 @@
 {
-  "checked_utc": "2026-10-23T20:07:18.389961+00:00",
-  "build": "2026.10.23.5",
+  "checked_utc": "2026-10-24T03:22:42.155871+00:00",
+  "build": "2026.10.24.6",
   "checks": {
     "app.min.js": "sha256 matches",
     "plugins/kinopub.js": "sha256 matches",
@@ -31,9 +31,10 @@
     "Bleach API response/audio playback with a real account"
   ],
   "audio_diagnostics": {
-    "local_checks": "client opt-in/expiry/redaction and collector schema/CORS/write-only checks passed",
-    "live_HTTPS_probe": "OPTIONS and POST returned 204 through temporary Cloudflare Tunnel",
-    "real_TV_reports_received": 0,
-    "native_Samsung_attachment": "not connected: supplied TV address returned No route to host"
+    "real_TV_reports_received": 459,
+    "observed": "Russian and Japanese requests are AAC stereo; HLS4 test reported fatal playback failure before single unlabelled audio became available",
+    "fallback_regression": "HLS4 failure with Japanese selected reproduced default-Russian HLS2 fallback; fixed and tested in build 6",
+    "live_HTTPS_receiver": "204 with expanded schema",
+    "not_verified": "Root HLS4 failure code and audible Japanese on Samsung; awaiting updated-build report"
   }
 }
