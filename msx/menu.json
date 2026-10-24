@@ -1,15 +1,22 @@
 {
   "type": "pages",
-  "headline": "Lampa · личная сборка",
+  "headline": "Мой телевизор",
   "pages": [
     {
       "items": [
         {
           "type": "button",
-          "layout": "2,2,8,2",
+          "layout": "1,2,5,2",
           "icon": "movie",
-          "label": "Открыть Lampa + KinoPub",
+          "label": "KinoPub",
           "action": "link:https://dearlordylord.github.io/lampa/?v=7"
+        },
+        {
+          "type": "button",
+          "layout": "6,2,5,2",
+          "icon": "smart-display",
+          "label": "YouTube без рекламы",
+          "action": "system:tizen:launch:xvvl3S1TT1.TizenTubeStandalone"
         }
       ]
     }
