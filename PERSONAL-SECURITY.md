@@ -106,3 +106,12 @@ Build 6: live diagnostics received both Russian and Japanese AAC/stereo requests
 
 
 Build 7 independently implements the legacy HLS audio-in-path protocol observed in CDNServices' public player chunk. Only a recognized master basename is changed; query strings, host and signed path prefix are preserved. The helper is applied to qualities and fallback URLs and bypasses native in-stream switching for dedicated-audio masters. No external CDNServices scripts, endpoint pool, analytics or additional privileges were adopted. Tests pass; audible Japanese on the physical TV is not yet confirmed. The standalone replacement remains future work; this release still uses Lampa.
+
+
+## Direct API playback investigation, October 24
+
+A separately authorized temporary diagnostic API session returned real Bleach (2004), item 18009 episode metadata: Russian index 1 and Japanese index 2, both AAC stereo. Legacy masters for both audio indices returned HTTP 200 and were independently decoded with ffmpeg; their PCM hashes differ and both have nonzero RMS. This verifies distinct, nonempty upstream audio, not audibility on the Samsung device.
+
+The real API response also revealed HLS4/HLS2 source URLs hosted on https://api.service-kp.com. That trusted origin was already allowed for API connections but was mistakenly omitted from media-src. The policy now allows native media from that exact origin. No script, frame, account-header or arbitrary-host permission was added. A failing security regression captured the omitted origin and passes after the policy correction. Physical playback remains unverified.
+
+The Samsung network remote was paired successfully, with its token stored only in a private local file outside the repo. Reconnection succeeds. Installed-app enumeration is unsupported/unresponsive and launch of the isolated test page could not be confirmed by its telemetry. This is network-remote access, not Web Inspector or visual access. Developer Mode is still off. No claim of full autonomous TV debugging is justified by remote pairing alone.

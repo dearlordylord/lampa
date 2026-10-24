@@ -53,6 +53,8 @@ assert.deepEqual(loaded, ['./plugins/kinopub.js?v=personal-7']);
 assert.equal(plugContext.Plugins.loaded()[0], 'kinopub');
 const html = read('index.html');
 assert.ok(html.includes('Content-Security-Policy'));
+const mediaPolicy = html.match(/media-src ([^;]+)/)[1];
+assert.ok(mediaPolicy.split(/\s+/).includes('https://api.service-kp.com'), 'KinoPub returns HLS stream URLs on its API host; native media must allow that trusted origin');
 assert.ok(!html.includes("'unsafe-eval'") && !html.includes("script-src 'self' 'unsafe-inline'"));
 assert.ok(!/<script[^>]*src=["']https?:/i.test(html));
 assert.ok(read('vender/jquery/jquery.js').includes('jQuery JavaScript Library v3.7.1'));
