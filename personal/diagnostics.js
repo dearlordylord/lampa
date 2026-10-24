@@ -2,7 +2,7 @@
 (function (w) {
   'use strict';
   var endpoint = 'https://lens-information-art-tactics.trycloudflare.com/report';
-  var expires = 1792792967157; // Set only for the temporary diagnostic deployment.
+  var expires = 1792897039430; // Set only for the temporary diagnostic deployment.
   var until = 0, attached = false, timer, L, requested = null, tracks = [], lastSent = 0;
   var manifestCodecs = [], manifestStatus = null, lastError = null;
   function number(value) { return typeof value === 'number' && isFinite(value) ? value : null; }
