@@ -30,6 +30,10 @@ def sanitize(value):
     codecs = value.get('manifestCodecs', [])
     result['manifestCodecs'] = [tag(c) for c in codecs[:20]] if isinstance(codecs, list) else []
     result['manifestStatus'] = numeric(value.get('manifestStatus'))
+    environment = value.get('environment', {})
+    if isinstance(environment, dict):
+        result['environment'] = {key: environment.get(key) is True for key in ('tokenPresent', 'nativeApiPresent', 'mediaSourceSupported', 'urlAudioSelected')}
+        result['environment']['apiStatus'] = numeric(environment.get('apiStatus'))
     result['streamFormat'] = value.get('streamFormat') if value.get('streamFormat') in ('hls', 'hls2', 'hls4') else ''
     result['variantCount'] = numeric(value.get('variantCount'))
     renditions = value.get('renditions', [])
