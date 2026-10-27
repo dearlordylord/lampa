@@ -24,6 +24,8 @@ assert menu['pages'][0]['items'][0]['action'] == 'link:' + BASE + '?v=8'
 assert len(menu['pages'][0]['items']) == 2
 assert menu['pages'][0]['items'][1]['action'] == 'system:tizen:launch:xvvl3S1TT1.TizenTubeStandalone'
 assert 'id:rgh:dearlordylord' in get(BASE + 'guide.html').decode()
+for legacy in ('personal/subtitle-probe.html', 'personal/subtitle-probe.js', 'msx/subtitle-check.json'):
+    assert get(BASE + legacy), legacy
 checks['msx launcher'] = 'raw-GitHub descriptor and content action verified'
 checks['guide.html'] = 'published with launcher instructions'
 record = {

@@ -1,0 +1,45 @@
+{
+  "type": "pages",
+  "headline": "Мой телевизор",
+  "pages": [
+    {
+      "items": [
+        {
+          "type": "button",
+          "layout": "1,4,5,2",
+          "icon": "movie",
+          "label": "KinoPub",
+          "action": "link:https://dearlordylord.github.io/lampa/?v=8",
+          "iconSize": "medium"
+        },
+        {
+          "type": "button",
+          "layout": "6,4,5,2",
+          "icon": "smart-display",
+          "label": "YouTube без рекламы",
+          "action": "system:tizen:launch:xvvl3S1TT1.TizenTubeStandalone",
+          "iconSize": "medium"
+        }
+      ],
+      "transparent": true
+    }
+  ],
+  "version": "2026.10.27.8",
+  "background": "https://dearlordylord.github.io/lampa/msx/assets/spirited-away-train.jpg",
+  "transparent": true,
+  "extension": "Унесённые призраками · Studio Ghibli",
+  "underlay": {
+    "items": [
+      {
+        "type": "space",
+        "layout": "1,4,5,2",
+        "color": "rgba(9, 19, 31, 0.82)"
+      },
+      {
+        "type": "space",
+        "layout": "6,4,5,2",
+        "color": "rgba(9, 19, 31, 0.82)"
+      }
+    ]
+  }
+}
