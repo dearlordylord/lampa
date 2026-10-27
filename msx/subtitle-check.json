@@ -1,0 +1,19 @@
+{
+  "type": "pages",
+  "headline": "Проверка субтитров",
+  "pages": [
+    {
+      "items": [
+        {
+          "type": "button",
+          "layout": "2,2,8,2",
+          "icon": "subtitles",
+          "label": "Проверить Ludwig",
+          "focus": true,
+          "execute": true,
+          "action": "link:https://dearlordylord.github.io/lampa/personal/subtitle-probe.html"
+        }
+      ]
+    }
+  ]
+}
