@@ -118,7 +118,7 @@
       if (!id) { report({ event: 'media', episode: numeric(episode.number), status: 0 }, next); return; }
       get(api + '/items/media-links?mid=' + id, true, function (status, text) {
         var media;
-        try { media = JSON.parse(text); media = media.media || media; } catch (ignore) {}
+        try { media = JSON.parse(text); report({ event: 'media', phase: 'root-shape', episode: numeric(episode.number), count: Array.isArray(media.subtitles) ? media.subtitles.length : 0 }); media = media.media || media; } catch (ignore) {}
         if (status !== 200 || !media || typeof media !== 'object') {
           report({ event: 'media', episode: numeric(episode.number), mediaId: id, status: numeric(status) }, next);
           return;
@@ -147,8 +147,8 @@
       });
     } catch (ignore) { finish('error', status); return; }
     if (status !== 200 || episodes.length !== 2) { finish('error', status); return; }
-    report({ event: 'item', status: 200, episodes: episodes.map(function (episode) { return summary(episode, episode.subtitles); }) }, function () {
-      inspectEpisodes(episodes);
+    report({ event: 'item', phase: 'raw-id', episodes: episodes.map(function (episode) { return { episode: numeric(episode.number), mediaId: numeric(episode.id || episode.media_id) }; }) }, function () {
+      report({ event: 'item', status: 200, episodes: episodes.map(function (episode) { return summary(episode, episode.subtitles); }) }, function () { inspectEpisodes(episodes); });
     });
     });
   });
