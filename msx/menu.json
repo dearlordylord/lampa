@@ -1,19 +1,45 @@
 {
   "type": "pages",
-  "headline": "Проверка субтитров",
+  "headline": "Мой телевизор",
   "pages": [
     {
       "items": [
         {
           "type": "button",
-          "layout": "2,2,8,2",
-          "icon": "subtitles",
-          "label": "Проверить Ludwig",
-          "focus": true,
-          "execute": true,
-          "action": "link:https://dearlordylord.github.io/lampa/personal/subtitle-probe.html"
+          "layout": "1,4,5,2",
+          "icon": "movie",
+          "label": "KinoPub",
+          "action": "link:https://dearlordylord.github.io/lampa/?v=7",
+          "iconSize": "medium"
+        },
+        {
+          "type": "button",
+          "layout": "6,4,5,2",
+          "icon": "smart-display",
+          "label": "YouTube без рекламы",
+          "action": "system:tizen:launch:xvvl3S1TT1.TizenTubeStandalone",
+          "iconSize": "medium"
         }
-      ]
+      ],
+      "transparent": true
     }
-  ]
+  ],
+  "version": "2026.10.24.9",
+  "background": "https://dearlordylord.github.io/lampa/msx/assets/spirited-away-train.jpg",
+  "transparent": true,
+  "extension": "Унесённые призраками · Studio Ghibli",
+  "underlay": {
+    "items": [
+      {
+        "type": "space",
+        "layout": "1,4,5,2",
+        "color": "rgba(9, 19, 31, 0.82)"
+      },
+      {
+        "type": "space",
+        "layout": "6,4,5,2",
+        "color": "rgba(9, 19, 31, 0.82)"
+      }
+    ]
+  }
 }
