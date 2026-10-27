@@ -18,9 +18,9 @@ index = get(BASE).decode()
 assert 'Content-Security-Policy' in index and './personal/bootstrap.js' in index
 checks['index.html'] = 'CSP and personal loader published'
 start = json.loads(get('https://raw.githubusercontent.com/dearlordylord/msx/refs/heads/main/start.json'))
-assert start['parameter'] == 'content:' + BASE + 'msx/menu.json?v=9'
+assert start['parameter'] == 'content:' + BASE + 'msx/menu.json?v=10'
 menu = json.loads(get(BASE + 'msx/menu.json'))
-assert menu['pages'][0]['items'][0]['action'] == 'link:' + BASE + '?v=7'
+assert menu['pages'][0]['items'][0]['action'] == 'link:' + BASE + '?v=8'
 assert len(menu['pages'][0]['items']) == 2
 assert menu['pages'][0]['items'][1]['action'] == 'system:tizen:launch:xvvl3S1TT1.TizenTubeStandalone'
 assert 'id:rgh:dearlordylord' in get(BASE + 'guide.html').decode()
