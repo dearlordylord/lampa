@@ -9,7 +9,7 @@
           "layout": "1,4,5,2",
           "icon": "movie",
           "label": "KinoPub",
-          "action": "link:https://dearlordylord.github.io/lampa/?v=11",
+          "action": "link:https://dearlordylord.github.io/lampa/?v=12",
           "iconSize": "medium"
         },
         {
@@ -24,7 +24,7 @@
       "transparent": true
     }
   ],
-  "version": "2026.11.05.11",
+  "version": "2026.11.05.12",
   "background": "https://dearlordylord.github.io/lampa/msx/assets/spirited-away-train.jpg",
   "transparent": true,
   "extension": "Унесённые призраками · Studio Ghibli",
