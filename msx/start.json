@@ -1,7 +1,7 @@
 {
   "name": "Мой телевизор",
-  "version": "2026.11.05.9",
-  "parameter": "content:https://dearlordylord.github.io/lampa/msx/menu.json?v=11",
+  "version": "2026.11.05.10",
+  "parameter": "content:https://dearlordylord.github.io/lampa/msx/menu.json?v=12",
   "welcome": "none",
   "launcher": {
     "icon": "movie",
